@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only color (click)="massage()">
+        <ion-icon name="ios-mail-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>ติดต่อ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-card color="orange">
+    <ion-list *ngFor="let item of rowsInfo">
+      <ion-item color="orange">
+        <h2 align="center">โรงเรียนเวียงสุวรรรวิทยาคม</h2>
+      </ion-item>
+
+      <img src="http://localhost/image/unnamed.jpg" />
+      <ion-card-content *ngFor="let item of rowsInfo">
+        <p style="white-space: pre-wrap">{{item.infordescription}}</p>
+        <p>
+          facebook :
+          <a href="https://web.facebook.com/wkschoolpage"
+            >โรงเรียนเวียงสุวรรรวิทยาคม</a
+          >
+        </p>
+        <p>
+          website : <a href="http://www.wkschool.ac.th">www.wkschool.ac.th</a>
+        </p>
+
+        <p align="center">
+          <button ion-button color="primary" outline (click)="About()">
+            เกี่ยวกับการใช้งานของแอปพลิเคชัน
+          </button>
+        </p>
+      </ion-card-content>
+    </ion-list>
+  </ion-card>
+</ion-content>

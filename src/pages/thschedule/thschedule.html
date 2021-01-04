@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>เพิ่มตาราง</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>ภาคเรียนที่ </ion-label>
+        <ion-select [(ngModel)]="term">
+          <ion-option value="1/63">1/63</ion-option>
+          <ion-option value="2/63">2/63</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <button ion-button full (click)="search(term)">ค้นหา</button>
+
+    <ion-item>
+      <ion-label>เลือกวิชาเรียน</ion-label>
+      <ion-select multiple="true" (ionChange)="show($event)">
+        <ion-option *ngFor="let item of subject12" value="{{item.id}}"
+          >{{item.course}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>ชั้นเรียนปีที่</ion-label>
+        <ion-select [(ngModel)]="grade">
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="6">6</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>ห้องเรียน</ion-label>
+        <ion-select [(ngModel)]="classroom">
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>วัน</ion-label>
+        <ion-select [(ngModel)]="day">
+          <ion-option value="จันทร์">จันทร์</ion-option>
+          <ion-option value="อังคาร">อังคาร</ion-option>
+          <ion-option value="พุธ">พุธ</ion-option>
+          <ion-option value="พฤหัสบดี">พฤหัสบดี</ion-option>
+          <ion-option value="ศุกร์">ศุกร์</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-item>
+      <ion-label stacked>เวลา</ion-label>
+      <ion-input type="text" [(ngModel)]="time"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="Saveschedule(term,grade,classroom,day,time)">
+    เพิ่ม
+  </button>
+</ion-content>

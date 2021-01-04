@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ผลการเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <hr />
+  <h3 align="center">ผลการเรียนที่1/2563</h3>
+  <hr />
+  <ion-row style="border-bottom: groove">
+    <ion-col col-5>
+      <tr>
+        รายวิชา
+      </tr>
+    </ion-col>
+    <ion-col col-3>
+      <tr>
+        หน่วยกิต
+      </tr>
+    </ion-col>
+    <ion-col col-2>
+      <tr>
+        เกรด
+      </tr>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of  Grade ">
+    <ion-col col-5>
+      <tr>
+        {{item.course}}
+      </tr>
+    </ion-col>
+    <ion-col col-3>
+      <tr>
+        {{item.credit}}
+      </tr>
+    </ion-col>
+    <ion-col col-2>
+      <tr>
+        {{item.point}}
+      </tr>
+    </ion-col>
+  </ion-row>
+
+  <strong>เกรดเฉลี่ย : {{Grademix}} </strong>
+
+  <hr />
+  <h3 align="center">ผลการเรียนที่2/2563</h3>
+  <hr />
+  <ion-row style="border-bottom: groove">
+    <ion-col col-5>
+      <tr>
+        รายวิชา
+      </tr>
+    </ion-col>
+    <ion-col col-3>
+      <tr>
+        หน่วยกิต
+      </tr>
+    </ion-col>
+    <ion-col col-2>
+      <tr>
+        เกรด
+      </tr>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngFor="let item of Gradetwo">
+    <ion-col col-5>
+      <tr>
+        {{item.course}}
+      </tr>
+    </ion-col>
+    <ion-col col-3>
+      <tr>
+        {{item.credit}}
+      </tr>
+    </ion-col>
+    <ion-col col-2>
+      <tr>
+        {{item.point}}
+      </tr>
+    </ion-col>
+  </ion-row>
+
+  <strong>เกรดเฉลี่ย : {{Grademix2}} </strong>
+</ion-content>

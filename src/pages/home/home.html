@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>WELCOME WKSCOOL</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list inset>
+    <ion-item>
+      <ion-label floating>เบอร์โทรศัพท์</ion-label>
+      <ion-input type="text" maxlength="10" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>รหัสผ่าน</ion-label>
+      <ion-input
+        type="password"
+        maxlength="13"
+        [(ngModel)]="password"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding color="primary">
+    <button ion-button full (click)="login(username,password)">
+      เข้าสู่ระบบ
+    </button>
+  </div>
+  <ion-list align="center">
+    <ion-item color="light">
+      <h5 style="white-space: pre-wrap">
+                    สำหรับนักเรียน 
+            * เข้าสู่ระบบด้วยเบอร์โทรศัพท์ 
+            * รหัสผ่านเป็นเลขบัตรประชาชน
+      </h5>
+    </ion-item>
+  </ion-list>
+</ion-content>

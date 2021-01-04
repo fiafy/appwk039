@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>กระทู้แสดงความคิดเห็น</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>หัวข้อกระทู้</ion-label>
+      <ion-input type="text" [(ngModel)]="head_theme"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Message</ion-label>
+      <ion-textarea rows="6" cols="20" [(ngModel)]="message"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="Send (head_theme,message)">
+    ส่งข้อความ
+  </button>
+</ion-content>

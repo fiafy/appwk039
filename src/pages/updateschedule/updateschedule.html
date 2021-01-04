@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แก้ไข</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label>วัน</ion-label>
+      <ion-select [(ngModel)]="day">
+        <ion-option value="จันทร์">จันทร์</ion-option>
+        <ion-option value="อังคาร">อังคาร</ion-option>
+        <ion-option value="พุธ">พุธ</ion-option>
+        <ion-option value="พฤหัสบดี">พฤหัสบดี</ion-option>
+        <ion-option value="ศุกร์">ศุกร์</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>เวลา</ion-label>
+      <ion-input type="text" [(ngModel)]="time"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full (click)="Update(day,time)">แก้ไข</button>
+</ion-content>

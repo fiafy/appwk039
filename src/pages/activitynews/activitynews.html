@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ข่าวกิจกรรม</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-card>
+    <img src="http://localhost/image/iii.jpg" />
+  </ion-card>
+
+  <ion-card *ngFor="let item of rowsActivity">
+    <ion-item  color="orange">
+      <h2>{{item.activityhead}}</h2>
+      <p style="white-space: pre-wrap">{{item.activitydescription}}</p>
+      <h3>วันที่ลงประกาศ : {{item.activitydate}}</h3>
+    </ion-item>
+  </ion-card>
+</ion-content>

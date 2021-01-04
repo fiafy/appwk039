@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>สำหรับบุคลากร</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-item color="gg" *ngFor="let  item of rowsName">
+    <p color="danger">
+      ชื่อ: {{item.surname}} {{item.lastname}} เบอร์โทรศัพท์: {{item.username}}
+    </p>
+  </ion-item>
+  <ion-list color="orange">
+    <ion-item id="menuteacher" (click)=" ThmonFri()" color="orange">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/image/cth2.png" />
+      </ion-thumbnail>
+      <h2>ตารางเรียน</h2>
+      <p>เรียกดูตารางเรียน</p>
+    </ion-item>
+
+    <ion-item id="menuteacher" (click)="Selectgrade()" color="orange">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/image/choose3.png" />
+      </ion-thumbnail>
+      <h2>ลงผลการเรียน</h2>
+      <p>เรียกดูผลการเรียน</p>
+    </ion-item>
+
+    <ion-item id="menuteacher" (click)="Gpa()" color="orange">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/image/gpa2.png" />
+      </ion-thumbnail>
+      <h2>แบบจำลองคำนวณเกรด</h2>
+      <p>เรียกดูแบบจำลอง</p>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="logout()">ออกจากระบบ</button>
+</ion-content>

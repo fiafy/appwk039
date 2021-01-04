@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ข่าวกิจกรรม</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list color="orange">
+    <ion-item color="orange">
+      <ion-label stacked>หัวข้อข่าว</ion-label>
+      <ion-input type="text" [(ngModel)]="activityhead"></ion-input>
+    </ion-item>
+
+    <ion-item color="orange"> 
+      <ion-label stacked>รายละเอียด</ion-label>
+      <ion-textarea
+        rows="10"
+        type="text"
+        [(ngModel)]="activitydescription"
+      ></ion-textarea>
+    </ion-item>
+
+    <ion-item color="orange">
+      <ion-label>วันที่ลงประกาศ</ion-label>
+      <ion-datetime
+        displayFormat="DD/MMMM/YYYY"
+        [(ngModel)]="activitydate"
+      ></ion-datetime>
+    </ion-item>
+  </ion-list>
+  <button
+    ion-button
+    full
+    (click)="Addactivity(activityhead,activitydescription,activitydate)"
+  >
+    เพิ่มประกาศ
+  </button>
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>เพิ่มเกรดนักเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label>เลือกวิชาเรียน</ion-label>
+      <ion-select multiple="true" (ionChange)="show($event)">
+        <ion-option *ngFor="let sub of subject" value="{{sub.couse_id}}"
+          >{{sub.course}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>ชั้นเรียนปีที่</ion-label>
+      <ion-select [(ngModel)]="grade">
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>ห้องเรียน</ion-label>
+      <ion-select [(ngModel)]="classroom">
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full (click)="search(grade,classroom)">ค้นหา</button>
+  <ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>เลือกเด็กนักเรียน</ion-label>
+        <ion-select [(ngModel)]="student_id">
+          <ion-option *ngFor="let item of student" value="{{item.id}}">
+            {{item.surname}} {{item.lastname}}</ion-option
+          >
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label stacked>ระบุเกรด</ion-label>
+      <ion-input type="text" [(ngModel)]="point"></ion-input>
+    </ion-item>
+
+    <button ion-button full (click)="Save(student_id,point)">
+      เพิ่มเกรดนักเรียน
+    </button>
+  </ion-list>
+ 
+</ion-content>

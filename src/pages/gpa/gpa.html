@@ -1,0 +1,305 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แบบจำลองคำนวณเกรด</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <td ion-col col-2 >
+      <ion-list>
+        <ion-item >
+          <ion-label color="danger">หน่วยกิต</ion-label>
+          <ion-select type="number" [(ngModel)]="credit1">
+            <ion-option value="0.5">0.5</ion-option>
+            <ion-option value="1.0">1.0</ion-option>
+            <ion-option value="1.5">1.5</ion-option>
+            <ion-option value="2.0">2.0</ion-option>
+            <ion-option value="2.5">2.5</ion-option>
+            <ion-option value="3.0">3.0</ion-option>
+            <ion-option value="3.5">3.5</ion-option>
+            <ion-option value="4.0">4.0</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+    <td ion-col col-5>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">เกรด</ion-label>
+          <ion-select type="number" [(ngModel)]="grade1">
+            <ion-option value="4">4(A)</ion-option>
+            <ion-option value="3.5">3.5(B+)</ion-option>
+            <ion-option value="3">3(ฺB)</ion-option>
+            <ion-option value="2.5">2.5(C+)</ion-option>
+            <ion-option value="2">2(C)</ion-option>
+            <ion-option value="1.5">1.5(D+)</ion-option>
+            <ion-option value="1">1(D)</ion-option>
+            <ion-option value="0">0(E)</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+
+    <hr />
+    <td ion-col col-2>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">หน่วยกิต</ion-label>
+          <ion-select type="number" [(ngModel)]="credit2">
+            <ion-option value="0.5">0.5</ion-option>
+            <ion-option value="1.0">1.0</ion-option>
+            <ion-option value="1.5">1.5</ion-option>
+            <ion-option value="2.0">2.0</ion-option>
+            <ion-option value="2.5">2.5</ion-option>
+            <ion-option value="3.0">3.0</ion-option>
+            <ion-option value="3.5">3.5</ion-option>
+            <ion-option value="4.0">4.0</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+
+    <td ion-col col-5>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">เกรด</ion-label>
+          <ion-select type="number" [(ngModel)]="grade2">
+            <ion-option value="4">4(A)</ion-option>
+            <ion-option value="3.5">3.5(B+)</ion-option>
+            <ion-option value="3">3(ฺB)</ion-option>
+            <ion-option value="2.5">2.5(C+)</ion-option>
+            <ion-option value="2">2(C)</ion-option>
+            <ion-option value="1.5">1.5(D+)</ion-option>
+            <ion-option value="1">1(D)</ion-option>
+            <ion-option value="0">0(E)</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+
+    <hr />
+    <td ion-col col-2>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">หน่วยกิต</ion-label>
+          <ion-select type="number" [(ngModel)]="credit3">
+            <ion-option value="0.5">0.5</ion-option>
+            <ion-option value="1.0">1.0</ion-option>
+            <ion-option value="1.5">1.5</ion-option>
+            <ion-option value="2.0">2.0</ion-option>
+            <ion-option value="2.5">2.5</ion-option>
+            <ion-option value="3.0">3.0</ion-option>
+            <ion-option value="3.5">3.5</ion-option>
+            <ion-option value="4.0">4.0</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+    <td ion-col col-5>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">เกรด</ion-label>
+          <ion-select type="number" [(ngModel)]="grade3">
+            <ion-option value="4">4(A)</ion-option>
+            <ion-option value="3.5">3.5(B+)</ion-option>
+            <ion-option value="3">3(ฺB)</ion-option>
+            <ion-option value="2.5">2.5(C+)</ion-option>
+            <ion-option value="2">2(C)</ion-option>
+            <ion-option value="1.5">1.5(D+)</ion-option>
+            <ion-option value="1">1(D)</ion-option>
+            <ion-option value="0">0(E)</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+
+    <hr />
+    <td ion-col col-2>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">หน่วยกิต</ion-label>
+          <ion-select type="number" [(ngModel)]="credit4">
+            <ion-option value="0.5">0.5</ion-option>
+            <ion-option value="1.0">1.0</ion-option>
+            <ion-option value="1.5">1.5</ion-option>
+            <ion-option value="2.0">2.0</ion-option>
+            <ion-option value="2.5">2.5</ion-option>
+            <ion-option value="3.0">3.0</ion-option>
+            <ion-option value="3.5">3.5</ion-option>
+            <ion-option value="4.0">4.0</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+    <td ion-col col-5>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger"> เกรด</ion-label>
+          <ion-select [(ngModel)]="grade4">
+            <ion-option value="4">4(A)</ion-option>
+            <ion-option value="3.5">3.5(B+)</ion-option>
+            <ion-option value="3">3(ฺB)</ion-option>
+            <ion-option value="2.5">2.5(C+)</ion-option>
+            <ion-option value="2">2(C)</ion-option>
+            <ion-option value="1.5">1.5(D+)</ion-option>
+            <ion-option value="1">1(D)</ion-option>
+            <ion-option value="0">0(E)</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+
+    <hr />
+    <td ion-col col-2>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">หน่วยกิต</ion-label>
+          <ion-select type="number" [(ngModel)]="credit5">
+            <ion-option value="0.5">0.5</ion-option>
+            <ion-option value="1.0">1.0</ion-option>
+            <ion-option value="1.5">1.5</ion-option>
+            <ion-option value="2.0">2.0</ion-option>
+            <ion-option value="2.5">2.5</ion-option>
+            <ion-option value="3.0">3.0</ion-option>
+            <ion-option value="3.5">3.5</ion-option>
+            <ion-option value="4.0">4.0</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+    <td ion-col col-5>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">เกรด</ion-label>
+          <ion-select [(ngModel)]="grade5">
+            <ion-option value="4">4(A)</ion-option>
+            <ion-option value="3.5">3.5(B+)</ion-option>
+            <ion-option value="3">3(ฺB)</ion-option>
+            <ion-option value="2.5">2.5(C+)</ion-option>
+            <ion-option value="2">2(C)</ion-option>
+            <ion-option value="1.5">1.5(D+)</ion-option>
+            <ion-option value="1">1(D)</ion-option>
+            <ion-option value="0">0(E)</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+
+    <hr />
+    <td ion-col col-2>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">หน่วยกิต</ion-label>
+          <ion-select type="number" [(ngModel)]="credit6">
+            <ion-option value="0.5">0.5</ion-option>
+            <ion-option value="1.0">1.0</ion-option>
+            <ion-option value="1.5">1.5</ion-option>
+            <ion-option value="2.0">2.0</ion-option>
+            <ion-option value="2.5">2.5</ion-option>
+            <ion-option value="3.0">3.0</ion-option>
+            <ion-option value="3.5">3.5</ion-option>
+            <ion-option value="4.0">4.0</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+    <td ion-col col-5>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">เกรด</ion-label>
+          <ion-select [(ngModel)]="grade6">
+            <ion-option value="4">4(A)</ion-option>
+            <ion-option value="3.5">3.5(B+)</ion-option>
+            <ion-option value="3">3(ฺB)</ion-option>
+            <ion-option value="2.5">2.5(C+)</ion-option>
+            <ion-option value="2">2(C)</ion-option>
+            <ion-option value="1.5">1.5(D+)</ion-option>
+            <ion-option value="1">1(D)</ion-option>
+            <ion-option value="0">0(E)</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+
+    <hr />
+    <td ion-col col-2>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">หน่วยกิต</ion-label>
+          <ion-select type="number" [(ngModel)]="credit7">
+            <ion-option value="0.5">0.5</ion-option>
+            <ion-option value="1.0">1.0</ion-option>
+            <ion-option value="1.5">1.5</ion-option>
+            <ion-option value="2.0">2.0</ion-option>
+            <ion-option value="2.5">2.5</ion-option>
+            <ion-option value="3.0">3.0</ion-option>
+            <ion-option value="3.5">3.5</ion-option>
+            <ion-option value="4.0">4.0</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+    <td ion-col col-5>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">เกรด</ion-label>
+          <ion-select [(ngModel)]="grade7">
+            <ion-option value="4">4(A)</ion-option>
+            <ion-option value="3.5">3.5(B+)</ion-option>
+            <ion-option value="3">3(ฺB)</ion-option>
+            <ion-option value="2.5">2.5(C+)</ion-option>
+            <ion-option value="2">2(C)</ion-option>
+            <ion-option value="1.5">1.5(D+)</ion-option>
+            <ion-option value="1">1(D)</ion-option>
+            <ion-option value="0">0(E)</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+
+    <hr />
+    <td ion-col col-2>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">หน่วยกิต</ion-label>
+          <ion-select type="number" [(ngModel)]="credit8">
+            <ion-option value="0.5">0.5</ion-option>
+            <ion-option value="1.0">1.0</ion-option>
+            <ion-option value="1.5">1.5</ion-option>
+            <ion-option value="2.0">2.0</ion-option>
+            <ion-option value="2.5">2.5</ion-option>
+            <ion-option value="3.0">3.0</ion-option>
+            <ion-option value="3.5">3.5</ion-option>
+            <ion-option value="4.0">4.0</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+    <td ion-col col-5>
+      <ion-list>
+        <ion-item>
+          <ion-label color="danger">เกรด</ion-label>
+          <ion-select [(ngModel)]="grade8">
+            <ion-option value="4">4(A)</ion-option>
+            <ion-option value="3.5">3.5(B+)</ion-option>
+            <ion-option value="3">3(ฺB)</ion-option>
+            <ion-option value="2.5">2.5(C+)</ion-option>
+            <ion-option value="2">2(C)</ion-option>
+            <ion-option value="1.5">1.5(D+)</ion-option>
+            <ion-option value="1">1(D)</ion-option>
+            <ion-option value="0">0(E)</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </td>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>คำนวณเกรด : <span class="result">{{newLocal}}</span></ion-label>
+  </ion-item>
+  <p align="center">
+    <button ion-button color="danger" outline (click)="reset()">ล้าง</button>
+    <button ion-button color="danger" outline (click)="add ()">คำนวณ</button>
+  </p>
+</ion-content>

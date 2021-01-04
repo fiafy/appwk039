@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>สำหรับผู้ดูแลระบบ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding>
+          <ion-item id="index" (click)="Addplan()">
+            <img src="http://localhost/image/one.jpg" />
+          </ion-item>
+          <p>แผนการเรียน</p>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding>
+          <ion-item id="index" (click)=" Studentinformation()">
+            <img src="http://localhost/image/us.jpg" />
+          </ion-item>
+          <p>เพิ่มรหัสuser</p>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding>
+          <ion-item id="index" (click)="Publicize()">
+            <img src="http://localhost/image/ps.jpg" />
+          </ion-item>
+          <p>ประชาสัมพันธ์</p>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding>
+          <ion-item id="index" (click)="Thactivitynews()">
+            <img src="http://localhost/image/kk.jpg" />
+          </ion-item>
+          <p>ข่าวกิจกรรม</p>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding>
+          <ion-item id="index" (click)="Thcalendar()">
+            <img src="http://localhost/image/cl.jpg" />
+          </ion-item>
+          <p>ปฏิทินวิชาการ</p>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding>
+          <ion-item id="index" (click)=" app()">
+            <img src="http://localhost/image/problem.jpg" />
+          </ion-item>
+          <p>ปัญหาของแอพ</p>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding>
+          <ion-item id="index" (click)="Infoschool()">
+            <img src="http://localhost/image/sc.jpg" />
+          </ion-item>
+          <p>ข้อมูลโรงเรียน</p>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding>
+          <ion-item id="index" (click)="Ththeme()">
+            <img src="http://localhost/image/th.jpg" />
+          </ion-item>
+          <p>กระทู้</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <button ion-button full (click)="logout()">ออกจากระบบ</button>
+</ion-content>

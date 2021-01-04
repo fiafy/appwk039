@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แก้ไขเกรด</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>ชื่อ</ion-label>
+      <ion-input type="text" [(ngModel)]="surname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>นามสกุล</ion-label>
+      <ion-input type="text" [(ngModel)]="lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>เกรด</ion-label>
+      <ion-input type="text" [(ngModel)]="point"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="Update(student_id,point)">
+    แก้ไข
+  </button>
+</ion-content>

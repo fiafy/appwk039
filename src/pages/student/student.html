@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>สำหรับนักเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="bg">
+  <ion-item color="gg" *ngFor="let  item of rowsName">
+    <p color="danger">
+      ชื่อ: {{item.surname}} {{item.lastname}} เบอร์โทรศัพท์: {{item.username}}
+    </p>
+  </ion-item>
+
+  <ion-list color="orange">
+    <ion-item id="student" (click)="Showstudyplanone()" color="orange">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/image/list2.png" />
+      </ion-thumbnail>
+      <h2>แผนการเรียน</h2>
+      <p>เรียกดูแผนการเรียน</p>
+    </ion-item>
+
+    <ion-item id="student" (click)="Stuschedule()" color="orange">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/image/cth2.png" />
+      </ion-thumbnail>
+      <h2>ตารางเรียน</h2>
+      <p>เรียกดูตารางเรียน</p>
+    </ion-item>
+
+    <ion-item id="student" (click)="Stugrade()" color="orange">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/image/test.png" />
+      </ion-thumbnail>
+      <h2>ผลการเรียน</h2>
+      <p>เรียกดูผลการเรียน</p>
+    </ion-item>
+
+    <ion-item id="student" (click)="Stugpa()"color="orange">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/image/gpa2.png" />
+      </ion-thumbnail>
+      <h2>แบบจำลองคำนวณเกรด</h2>
+      <p>เรียกดูแบบจำลอง</p>
+    </ion-item>
+
+    <ion-item id="student" (click)="Stutheme()" color="orange">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/image/kt.png" />
+      </ion-thumbnail>
+      <h2>กระทู้</h2>
+      <p>เรียกดูกระทู้</p>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full (click)="logout()">ออกจากระบบ</button>
+</ion-content>

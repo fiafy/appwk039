@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only color (click)="Add()">
+        <ion-icon name="md-add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>ปฎิทินวิชาการ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-card *ngFor="let item of rowsCalendar">
+    <ion-item>
+      <h2>วันที่ : {{item.calenderhead}}</h2>
+      <p style="white-space: pre-wrap">รายละเอียด : {{item.calenderlist}}</p>
+
+      <button
+        ion-button
+        color="secondary"
+        (click)="btupdate(item.calenderid,item.calenderhead,item.calenderlist)"
+      >
+        <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+      </button>
+      <button ion-button color="danger" (click)="Delete(item.calenderid)">
+        <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+      </button>
+    </ion-item>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ข้อมูลนักเรียน </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label>ชั้นเรียนปีที่</ion-label>
+      <ion-select [(ngModel)]="grade">
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>ห้องเรียน</ion-label>
+      <ion-select [(ngModel)]="classroom">
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>ชื่อ</ion-label>
+      <ion-input type="text" [(ngModel)]="surname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>นามสกุล</ion-label>
+      <ion-input type="text" [(ngModel)]="lastname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>password</ion-label>
+      <ion-input type="text" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>ประเภท</ion-label>
+      <ion-select [(ngModel)]="type">
+        <ion-option value="teacher">teacher</ion-option>
+        <ion-option value="student">student</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <button
+    ion-button
+    full
+    (click)=" Saveinformation(grade,classroom,surname,lastname,username,password,type)"
+  >
+    บันทึกข้อมูลนักเรียน
+  </button>
+</ion-content>

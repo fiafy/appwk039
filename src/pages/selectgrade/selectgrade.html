@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ผลการเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="has-footer" padding class="bg">
+  <button ion-button full (click)="Grade1()">เพิ่มผลการเรียนเทอม 1</button>
+  <button ion-button full (click)="Grade2()">เพิ่มผลการเรียนเทอม 2</button>
+  <hr />
+  <h3 align="center">รายวิชาที่สอน 1/2563</h3>
+  <hr />
+
+  <ion-card *ngFor="let  item of subject">
+    <ion-item>
+      <h3>รหัสวิชา {{item.course_code}}</h3>
+      <h3>วิชา : {{item.course}}</h3>
+
+      <button ion-button (click)="View(item.couse_id)">
+        <ion-icon name="md-search"></ion-icon>&nbsp; เรียกดู
+      </button>
+    </ion-item>
+  </ion-card>
+
+  <hr />
+
+  <h3 align="center">รายวิชาที่สอน 2/2563</h3>
+  <hr />
+
+  <ion-card *ngFor="let  item of subject2">
+    <ion-item>
+      <h3>รหัสวิชา {{item.course_code}}</h3>
+      <h3>วิชา : {{item.course}}</h3>
+
+      <button ion-button (click)="View(item.couse_id)">
+        <ion-icon name="md-search"></ion-icon>&nbsp; เรียกดู
+      </button>
+    </ion-item>
+  </ion-card>
+</ion-content>

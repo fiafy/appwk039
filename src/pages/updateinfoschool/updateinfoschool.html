@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แก้ไขข้อมูลโรงเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>รายละเอียด</ion-label>
+      <ion-textarea
+        rows="15"
+        type="text"
+        [(ngModel)]="infordescription"
+      ></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="Update(inforid,infordescription)">แก้ไข</button>
+</ion-content>

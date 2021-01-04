@@ -1,0 +1,311 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only color (click)="Thschedule()">
+        <ion-icon name="md-add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>ตารางเรียน </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label align="center">ภาคเรียนที่ 1/63 </ion-label>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="monday"
+        ><img src="http://localhost/image/101.jpg" /> จันทร์
+      </ion-segment-button>
+      <ion-segment-button value="Tuesday"
+        ><img src="http://localhost/image/22.jpg" /> อังคาร</ion-segment-button
+      >
+      <ion-segment-button value="Wednesday"
+        ><img src="http://localhost/image/33.jpg" /> พุธ
+      </ion-segment-button>
+      <ion-segment-button value="Thursday"
+        ><img src="http://localhost/image/44.jpg" /> พฤหัสบดี
+      </ion-segment-button>
+      <ion-segment-button value="Friday"
+        ><img src="http://localhost/image/550.jpg" /> ศุกร์
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'monday'">
+      <ion-card *ngFor="let  item of rowsMonday">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button 
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger"  (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Tuesday'">
+      <ion-card *ngFor="let  item of rowsTuesday">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Wednesday'">
+      <ion-card *ngFor="let  item of rowsWednesday">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Thursday'">
+      <ion-card *ngFor="let  item of rowsThursday">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Friday'">
+      <ion-card *ngFor="let  item of rowsFriday">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+  </div>
+
+  <hr />
+  <ion-list>
+    <ion-item>
+      <ion-label align="center">ภาคเรียนที่ 2/63 </ion-label>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <ion-segment [(ngModel)]="pet2">
+      <ion-segment-button value="monday2"
+        ><img src="http://localhost/image/101.jpg" /> จันทร์
+      </ion-segment-button>
+      <ion-segment-button value="Tuesday"
+        ><img src="http://localhost/image/22.jpg" /> อังคาร</ion-segment-button
+      >
+      <ion-segment-button value="Wednesday"
+        ><img src="http://localhost/image/33.jpg" /> พุธ
+      </ion-segment-button>
+      <ion-segment-button value="Thursday"
+        ><img src="http://localhost/image/44.jpg" /> พฤหัสบดี
+      </ion-segment-button>
+      <ion-segment-button value="Friday"
+        ><img src="http://localhost/image/550.jpg" /> ศุกร์
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="pet2">
+    <ion-list *ngSwitchCase="'monday2'">
+      <ion-card *ngFor="let  item of rowsMonday2">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Tuesday'">
+      <ion-card *ngFor="let  item of rowsTuesday21">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Wednesday'">
+      <ion-card *ngFor="let  item of rowsWednesday2">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Thursday'">
+      <ion-card *ngFor="let  item of rowsThursday2">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Friday'">
+      <ion-card *ngFor="let  item of rowsFriday2">
+        <ion-card color="pp">
+          <ion-card-header> {{item.time}} </ion-card-header>
+        </ion-card>
+
+        <ion-list>
+          <ion-item>
+            <h2>วิชา : {{item.course}}</h2>
+            <h3>ครูผู้สอน : {{item.surname}} {{item.lastname}}</h3>
+            <button
+              ion-button
+              color="secondary"
+              (click)="btupdate(item.id,item.day,item.time)"
+            >
+              <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="Delete(item.id)">
+              <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>

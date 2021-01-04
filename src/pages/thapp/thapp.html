@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ปัญหาของแอพ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-card *ngFor="let  item of rowsReport" >
+    <ion-item>
+      <h2>สถานะ :{{item.reportuser}}</h2>
+      <p style="white-space: pre-wrap">{{item.reportdescription}}</p>
+    </ion-item>
+  </ion-card>
+</ion-content>

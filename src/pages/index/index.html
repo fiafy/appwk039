@@ -1,0 +1,35 @@
+<ion-header>
+  <img src="http://localhost/image/wk.jpg" />
+</ion-header>
+
+<ion-content class="bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-xl-8>
+        <ion-slides pager [slidesPerView]="1" autoplay="3000" loop>
+          <ion-slide>
+            <img src="http://localhost/image/f1.jpg"  alt="" />
+          </ion-slide>
+          <ion-slide>
+            <img src="http://localhost/image/f2.jpg" alt="" />
+          </ion-slide>
+          <ion-slide>
+            <img src="http://localhost/image/f3.jpg" alt="" />
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-card>
+      <img src="http://localhost/image/in111.jpg" (click)="Newsrelease()" />
+    </ion-card>
+
+    <ion-card>
+      <img src="http://localhost/image/in22.jpg" (click)="Activitynews()" />
+    </ion-card>
+
+    <ion-card>
+      <img src="http://localhost/image/in33.jpg" (click)="Calendar()" />
+    </ion-card>
+    
+  </ion-grid>
+</ion-content>

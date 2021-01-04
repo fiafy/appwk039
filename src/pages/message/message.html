@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แจ้งปัญหาของApp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label>สถานนะผู้ใช้งาน</ion-label>
+      <ion-select [(ngModel)]="reportuser">
+        <ion-option value="บุคลากร">บุคลากร</ion-option>
+        <ion-option value="นักเรียน">นักเรียน</ion-option>
+        <ion-option value="บุคคลภายนอก">บุคคลภายนอก</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>รายละเอียด</ion-label>
+      <ion-textarea
+        type="text"
+        rows="6"
+        [(ngModel)]="reportdescription"
+      ></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="Send (reportuser,reportdescription)">
+    ส่ง
+  </button>
+</ion-content>

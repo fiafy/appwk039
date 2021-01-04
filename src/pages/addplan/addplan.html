@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>เพิ่มแผนการเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item>
+      <ion-label>ชั้นเรียนปีที่</ion-label>
+      <ion-select [(ngModel)]="grade">
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>ภาคเรียนที่ </ion-label>
+      <ion-select [(ngModel)]="term">
+        <ion-option value="1/63">1/63</ion-option>
+        <ion-option value="2/63">2/63</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>เลือกครูผู้สอน</ion-label>
+      <ion-select [(ngModel)]="teacher_id" multiple="true">
+        <ion-option *ngFor="let item of teacher12" value="{{item.id}}"
+          >{{item.surname}} {{item.lastname}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>รห้สวิชา</ion-label>
+      <ion-input type="text" [(ngModel)]="course_code"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>รายวิชา</ion-label>
+      <ion-input type="text" [(ngModel)]="course"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>หน่วยกิต</ion-label>
+      <ion-input type="text" [(ngModel)]="credit"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button
+    ion-button
+    full
+    (click)=" Saveplan(grade,term,course_code,course,credit,teacher_id)"
+  >
+    บันทึกแผนการเรียน
+  </button>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>วิชาเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-item>
+    <ion-label>ภาคเรียนที่ </ion-label>
+    <ion-select [(ngModel)]="term">
+      <ion-option value="1/63">1/63</ion-option>
+      <ion-option value="2/63">2/63</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>ชั้นเรียนปีที่</ion-label>
+    <ion-select [(ngModel)]="grade">
+      <ion-option value="1">1</ion-option>
+      <ion-option value="2">2</ion-option>
+      <ion-option value="3">3</ion-option>
+      <ion-option value="4">4</ion-option>
+      <ion-option value="5">5</ion-option>
+      <ion-option value="6">6</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>ห้องเรียน</ion-label>
+    <ion-select [(ngModel)]="classroom">
+      <ion-option value="1">1</ion-option>
+      <ion-option value="2">2</ion-option>
+      <ion-option value="3">3</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <button ion-button full (click)="search(term,grade,classroom)">ค้นหา</button>
+  <ion-list>
+    <ion-card *ngFor="let  item of student1">
+      <ion-item>
+        <h3>ชื่อ : {{item.surname}} {{item.lastname}} เกรด : {{item.point}}</h3>
+        <button
+          ion-button color="secondary"
+          (click)="btupdate(item.student_id,item.surname,item.lastname,item.point)"
+        >
+          <ion-icon name="create"></ion-icon>&nbsp; แก้ไข
+        </button>
+        <button ion-button color="danger" (click)="Delete(item.course_id,item.student_id)">
+          <ion-icon name="md-trash"></ion-icon>&nbsp; ลบ
+        </button>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แก้ไขปฏิทินวิชาการ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item color="orange">
+      <ion-label stacked>หัวข้อข่าว</ion-label>
+      <ion-input type="text" [(ngModel)]="calenderhead"></ion-input>
+    </ion-item>
+
+    <ion-item color="orange">
+      <ion-label stacked>รายละเอียด</ion-label>
+      <ion-textarea
+        rows="5"
+        type="text"
+        [(ngModel)]="calenderlist"
+      ></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button
+    ion-button
+    full
+    (click)="Update(calenderid ,calenderhead,calenderlist)"
+  >
+    แก้ไข
+  </button>
+</ion-content>

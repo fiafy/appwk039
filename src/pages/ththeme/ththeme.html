@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ข้อความกระทู้ความคิดเห็น</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-card *ngFor="let  item of rowsTheme">
+    <ion-item>
+      <h2>หัวข้อกระทู้ :{{item.head_theme}}</h2>
+      <p style="white-space: pre-wrap">เรื่อง :{{item.message}}</p>
+    </ion-item>
+  </ion-card>
+</ion-content>

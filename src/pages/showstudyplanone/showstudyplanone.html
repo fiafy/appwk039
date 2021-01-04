@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แผนการเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg" >
+  <hr />
+  <h3 align="center" >ภาคเรียนที่1/2563</h3 >
+  <hr />
+  <ion-row style="border-bottom: groove" >
+    <ion-col col-3 >
+      <tr>
+        รหัสวิชา
+      </tr>
+    </ion-col>
+    <ion-col col-5 >
+      <tr>
+        รายวิชา
+      </tr>
+    </ion-col>
+    <ion-col col-2 >
+      <tr>
+        หน่วยกิต
+      </tr>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of rowsStudyplan">
+    <ion-col col-3 >
+      <tr >
+        {{item.course_code}}
+      </tr>
+    </ion-col>
+    <ion-col col-5 >
+      <tr >
+        {{item.course}}
+      </tr>
+    </ion-col>
+    <ion-col col-2 >
+      <tr >
+        {{item.credit}}
+      </tr>
+    </ion-col>
+  </ion-row>
+
+  <hr />
+  <h3 align="center" >ภาคเรียนที่2/2563 </h3>
+  <hr />
+  <ion-row style="border-bottom: groove" >
+    <ion-col col-3 >
+      <tr>
+        รหัสวิชา
+      </tr>
+    </ion-col>
+    <ion-col col-5 >
+      <tr>
+        รายวิชา
+      </tr>
+    </ion-col>
+    <ion-col col-2 >
+      <tr>
+        หน่วยกิต
+      </tr>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of rowsStudyplanone">
+    <ion-col col-3 >
+      <tr >
+        {{item.course_code}}
+      </tr>
+    </ion-col>
+    <ion-col col-5 >
+      <tr>
+        {{item.course}}
+      </tr>
+    </ion-col>
+    <ion-col col-2 >
+      <tr>
+        {{item.credit}}
+      </tr>
+    </ion-col>
+  </ion-row>
+</ion-content>

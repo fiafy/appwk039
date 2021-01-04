@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>เพิ่มข้อมูลโรงเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-list>
+    <ion-item color="orange">
+      <ion-label stacked>รายละเอียด</ion-label>
+      <ion-textarea
+        rows="15"
+        type="text"
+        [(ngModel)]="infordescription"
+      ></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="AddInfo(infordescription)">
+    เพิ่มข้อมูลโรงเรียน
+  </button>
+</ion-content>

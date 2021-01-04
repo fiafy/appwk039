@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ข่าวประชาสัมพันธ์</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-card >
+    <img src="http://localhost/image/kte.png" />
+  </ion-card>
+  <ion-card *ngFor="let  item of rowsNews">
+    <ion-item  color="orange">
+      <h2>{{item.news_head}}</h2>
+      <p style="white-space: pre-wrap">{{item.news_description}}</p>
+      <h3>วันที่ลงประกาศ : {{item.news_date}}</h3>
+    </ion-item>
+  </ion-card>
+</ion-content>

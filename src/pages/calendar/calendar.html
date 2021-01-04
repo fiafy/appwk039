@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ปฎิทินวิชาการ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-item *ngFor="let item of rowsCalendar"  color="orange">
+    <h2>วันที่ : {{item.calenderhead}}</h2>
+    <p style="white-space: pre-wrap">รายละเอียด : {{item.calenderlist}}</p>
+  </ion-item>
+</ion-content>
